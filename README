@@ -1,6 +1,6 @@
 Installation:
 
-  git clone git@github.com:dshrader38/dot-files.git ~/dot-files
+  git clone http://david.shrader@chivgit01:7990/scm/~david.shrader/dot-files.git
 
 Create symlinks:
 
@@ -8,6 +8,7 @@ Create symlinks:
   ln -fs ~/dot-files/.vimrc ~/.vimrc
   ln -fs ~/dot-files/.bashrc ~/.bashrc
   ln -fs ~/dot-files/.bash_profile ~/.bash_profile
+  ln -fs ~/dot-files/.gitconfig ~/.gitconfig
 
 Switch to the `~/.vim` directory, and fetch submodules:
 
