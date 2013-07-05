@@ -1,0 +1,22 @@
+[user]
+	name = david.shrader
+	email = david.shrader@spottradingllc.com
+[core]
+	editor = vim
+	autocrlf = input
+[help]
+	autocorrect = 1
+[color]
+	ui = true
+[http]
+	sslverify = false
+[credential]
+	helper = cache --timeout=3600
+[alias]
+	b = branch
+  ba = branch -a
+  bd = branch -d
+	ci = commit
+  co = checkout
+	d = diff
+	st = status

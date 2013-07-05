@@ -1,0 +1,26 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+#source .bash_profile
+
+# User specific aliases and functions
+
+
+PATH=/opt/bin:/opt/gcc/bin:/opt/automake/bin:/opt/autoconf/bin:/opt/libtool/bin:/opt/python/bin:/opt/valgrind/bin:/opt/java/bin:$PATH:$HOME/bin
+export PATH
+
+LD_LIBRARY_PATH="/opt/gcc/lib:/opt/lib:/opt/python/lib"
+export LD_LIBRARY_PATH
+
+PKG_CONFIG_PATH="/opt/lib/pkgconfig:/usr/lib64/pkgconfig:/usr/lib/pkgconfig"
+export PKG_CONFIG_PATH
+
+PYTHONPATH=/opt/lib/python2.7/site-packages
+export PYTHONPATH
+
+alias svnout='svn diff --diff-cmd=/home/benjamin.gonzalez/linux/meld-1.6.1/bin/meld'
+alias svnin='svn diff -rBASE:HEAD --diff-cmd=/home/benjamin.gonzalez/linux/meld-1.6.1/bin/meld'
