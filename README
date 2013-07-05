@@ -1,6 +1,6 @@
 Installation:
 
-  git clone http://david.shrader@chivgit01:7990/scm/~david.shrader/dot-files.git
+  git clone http://david.shrader@chivgit01:7990/scm/~david.shrader/dot-files.git ~/dot-files
 
 Create symlinks:
 
