@@ -9,6 +9,7 @@ Create symlinks:
   ln -fs ~/dot-files/.bashrc ~/.bashrc
   ln -fs ~/dot-files/.bash_profile ~/.bash_profile
   ln -fs ~/dot-files/.gitconfig ~/.gitconfig
+  ln -fs ~/dot-files/.ssh ~/.ssh
 
 Switch to the `~/.vim` directory, and fetch submodules:
 
