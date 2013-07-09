@@ -14,12 +14,14 @@ function ff()
   find . -type f -iname '*'"$*"'*' -ls ;
 }
 
+
 # Get IP adress on ethernet.
 function my_ip()
 {
   MY_IP=$(/sbin/ifconfig eth0 | awk '/inet/ { print $2 } ' | sed -e s/addr://)
   echo ${MY_IP:-"Not connected"}
 }
+
 
 # Get current host related info.
 function ii()   
@@ -37,12 +39,13 @@ function ii()
   echo
 }
 
+
 # Process related funcitons
 function my_ps()
-ME
 {
   ps $@ -u $USER -o pid,%cpu,%mem,bsdtime,command ;
 }
+
 
 function pp()
 {
@@ -86,7 +89,7 @@ export PATH
 
 LD_LIBRARY_PATH=$HOME/applications/Qt5.1.0/5.1.0/gcc_64/lib:$LD_LIBRARY_PATH
 LD_LIBRARY_PATH=$HOME/applications/Qt5.1.0/Tools/QtCreator/lib:$LD_LIBRARY_PATH
-LD_LIBRARY_PATH=$CPP_SHARE/gnu/gcc-4.7.3/lib:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH
 
 # aliases
