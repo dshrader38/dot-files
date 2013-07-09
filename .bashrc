@@ -39,6 +39,7 @@ function ii()
 
 # Process related funcitons
 function my_ps()
+ME
 {
   ps $@ -u $USER -o pid,%cpu,%mem,bsdtime,command ;
 }
@@ -73,6 +74,20 @@ function extract()
   fi
 }
 
+#source /opt/spotdev/3rdParty/cpp/gnu/ccache/ccache-3.1.7/bin/gcc-4.6.3.env.sh
+
+CPP_SHARE=/spot/dev/3rdParty/cpp
+PYTHON_SHARE=
+
+PATH=$HOME/applications/Qt5.1.0/5.1.0/gcc_64/bin:$PATH
+PATH=$HOME/applications/Qt5.1.0/Tools/QtCreator/bin:$PATH
+PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/bin:$PATH
+export PATH
+
+LD_LIBRARY_PATH=$HOME/applications/Qt5.1.0/5.1.0/gcc_64/lib:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=$HOME/applications/Qt5.1.0/Tools/QtCreator/lib:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=$CPP_SHARE/gnu/gcc-4.7.3/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
 
 # aliases
 alias lsl='ls -al'
@@ -82,12 +97,5 @@ alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 alias asra='sh ~/scripts/maxnotional.sh'
 alias nikul='sh ~/scripts/maxnotionaltimestamp.sh'
 
-alias qt='~/scripts/qtcreator'
 alias 3p='cd /spot/dev/3rdParty'
-
-PATH=/spot/dev/3rdParty/cpp/gnu/gcc/gcc-4.7.3/bin:/usr/local/Trolltech/Qt-4.8.4/bin:$PATH
-export PATH
-
-LD_LIBRARY_PATH=/spot/dev/3rdParty/cpp/gnu/gcc-4.7.3/lib:/usr/local/Trolltech/Qt-4.8.4/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH
-
+alias qt='qtcreator'
