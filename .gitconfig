@@ -3,7 +3,7 @@
 	email = david.shrader@spottradingllc.com
 [core]
 	editor = vim
-	autocrlf = input
+	autocrlf = false
 [help]
 	autocorrect = 1
 [color]
