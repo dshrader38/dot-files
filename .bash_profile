@@ -7,7 +7,13 @@ fi
 
 # User specific environment and startup programs
 <<<<<<< HEAD
+<<<<<<< HEAD
 PATH=$PATH:$HOME/bin
+=======
+
+PATH=$PATH:$HOME/bin
+
+>>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
 =======
 
 PATH=$PATH:$HOME/bin
