@@ -1,24 +1,4 @@
 [submodule ".vim/bundle/supertab"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-  path = .vim/bundle/supertab
-  url = https://github.com/ervandew/supertab.git
-  #url = http://github.com/ervandew/supertab.git
-[submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
-  #url = https://github.com/tpope/vim-surround.git
-  url = http://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/nerdtree"]
-  path = .vim/bundle/nerdtree
-  url = https://github.com/scrooloose/nerdtree.git
-  #url = http://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/vim-pathogen"]
-	path = .vim/bundle/vim-pathogen
-  url = https://github.com/tpope/vim-pathogen.git
-  #url = http://github.com/tpope/vim-pathogen.git
-=======
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
 	path = .vim/bundle/supertab
 	url = git@github.com:ervandew/supertab.git
 [submodule ".vim/bundle/vim-surround"]
@@ -30,7 +10,3 @@
 [submodule ".vim/bundle/vim-pathogen"]
 	path = .vim/bundle/vim-pathogen
 	url = git@github.com:tpope/vim-pathogen.git
-<<<<<<< HEAD
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
