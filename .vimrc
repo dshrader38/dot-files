@@ -37,6 +37,9 @@ set tabstop=2
 set wildmenu                    " turn on the WiLd menu
 set viminfo=""                  " disable .viminfo file
 set visualbell                  " no sounds
- 
+
+" color scheme
+colorscheme grb256
+
 " make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
