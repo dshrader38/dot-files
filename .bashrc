@@ -5,8 +5,6 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# . /opt/spotdev/scripts/shared.bashrc
-
 
 # Find a file with a pattern in name:
 function ff() 
@@ -82,13 +80,15 @@ function extract()
 CPP_SHARE=/spot/dev/3rdParty/cpp
 PYTHON_SHARE=
 
-PATH=$HOME/applications/Qt5.1.0/5.1.0/gcc_64/bin:$PATH
-PATH=$HOME/applications/Qt5.1.0/Tools/QtCreator/bin:$PATH
+#PATH=$HOME/applications/Qt5.1.0/5.1.0/gcc_64/bin:$PATH
+#PATH=$HOME/applications/Qt5.1.0/Tools/QtCreator/bin:$PATH
+PATH=$HOME/install/ninja:$PATH
 PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/bin:$PATH
-export PATH
 
-LD_LIBRARY_PATH=$HOME/applications/Qt5.1.0/5.1.0/gcc_64/lib:$LD_LIBRARY_PATH
-LD_LIBRARY_PATH=$HOME/applications/Qt5.1.0/Tools/QtCreator/lib:$LD_LIBRARY_PATH
+export PATH
+##################################################################################
+#LD_LIBRARY_PATH=$HOME/applications/Qt5.1.0/5.1.0/gcc_64/lib:$LD_LIBRARY_PATH
+#LD_LIBRARY_PATH=$HOME/applications/Qt5.1.0/Tools/QtCreator/lib:$LD_LIBRARY_PATH
 LD_LIBRARY_PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH
 
@@ -101,4 +101,6 @@ alias asra='sh ~/scripts/maxnotional.sh'
 alias nikul='sh ~/scripts/maxnotionaltimestamp.sh'
 
 alias 3p='cd /spot/dev/3rdParty'
-alias qt='qtcreator'
+alias prod='cd /spot/dev/Production'
+alias core='cd /spot/dev/Production/Common/cpp/Core'
+alias qt='~/install/Qt5.1.0/Tools/QtCreator/bin/qtcreator'
