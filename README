@@ -1,6 +1,10 @@
 Installation:
 
+<<<<<<< HEAD
   git clone http://david.shrader@chivgit01:7990/scm/~david.shrader/dot-files.git ~/dot-files
+=======
+  git clone git@github.com:dshrader38/dot-files.git ~/dot-files
+>>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
 
 Create symlinks:
 
@@ -9,7 +13,10 @@ Create symlinks:
   ln -fs ~/dot-files/.bashrc ~/.bashrc
   ln -fs ~/dot-files/.bash_profile ~/.bash_profile
   ln -fs ~/dot-files/.gitconfig ~/.gitconfig
+<<<<<<< HEAD
   ln -fs ~/dot-files/.ssh ~/.ssh
+=======
+>>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
 
 Switch to the `~/.vim` directory, and fetch submodules:
 
