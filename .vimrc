@@ -39,7 +39,7 @@ set viminfo=""                  " disable .viminfo file
 set visualbell                  " no sounds
 
 " color scheme
-colorscheme grb256
+colorscheme vividchalk
 
 " make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
