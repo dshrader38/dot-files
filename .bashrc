@@ -5,16 +5,8 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 # . /opt/spotdev/scripts/shared.bashrc
 
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
-=======
-# . /opt/spotdev/scripts/shared.bashrc
-
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
 
 # Find a file with a pattern in name:
 function ff() 
@@ -22,13 +14,6 @@ function ff()
   find . -type f -iname '*'"$*"'*' -ls ;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
 # Get IP adress on ethernet.
 function my_ip()
 {
@@ -36,13 +21,6 @@ function my_ip()
   echo ${MY_IP:-"Not connected"}
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
 # Get current host related info.
 function ii()   
 {
@@ -59,26 +37,12 @@ function ii()
   echo
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
 # Process related funcitons
 function my_ps()
 {
   ps $@ -u $USER -o pid,%cpu,%mem,bsdtime,command ;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
 function pp()
 {
   my_ps f | awk '!/awk/ && $0~var' var=${1:-".*"} ;
@@ -109,8 +73,6 @@ function extract()
   fi
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 #source /opt/spotdev/3rdParty/cpp/gnu/ccache/ccache-3.1.7/bin/gcc-4.6.3.env.sh
 
 CPP_SHARE=/spot/dev/3rdParty/cpp
@@ -120,17 +82,12 @@ PYTHON_SHARE=
 #PATH=$HOME/applications/Qt5.1.0/Tools/QtCreator/bin:$PATH
 PATH=$HOME/install/ninja:$PATH
 PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/bin:$PATH
-
 export PATH
-##################################################################################
+
 #LD_LIBRARY_PATH=$HOME/applications/Qt5.1.0/5.1.0/gcc_64/lib:$LD_LIBRARY_PATH
 #LD_LIBRARY_PATH=$HOME/applications/Qt5.1.0/Tools/QtCreator/lib:$LD_LIBRARY_PATH
 LD_LIBRARY_PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
 
 # aliases
 alias lsl='ls -al'
@@ -140,23 +97,7 @@ alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 alias asra='sh ~/scripts/maxnotional.sh'
 alias nikul='sh ~/scripts/maxnotionaltimestamp.sh'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 alias 3p='cd /spot/dev/3rdParty'
 alias prod='cd /spot/dev/Production'
 alias core='cd /spot/dev/Production/Common/cpp/Core'
 alias qt='~/install/Qt5.1.0/Tools/QtCreator/bin/qtcreator'
-=======
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
-alias qt='~/scripts/qtcreator'
-alias 3p='cd /spot/dev/3rdParty'
-
-PATH=/spot/dev/3rdParty/cpp/gnu/gcc/gcc-4.7.3/bin:/usr/local/Trolltech/Qt-4.8.4/bin:$PATH
-export PATH
-
-LD_LIBRARY_PATH=/spot/dev/3rdParty/cpp/gnu/gcc-4.7.3/lib:/usr/local/Trolltech/Qt-4.8.4/lib:$LD_LIBRARY_PATH
-<<<<<<< HEAD
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
-=======
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea

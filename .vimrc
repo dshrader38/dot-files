@@ -37,17 +37,9 @@ set tabstop=2
 set wildmenu                    " turn on the WiLd menu
 set viminfo=""                  " disable .viminfo file
 set visualbell                  " no sounds
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 " color scheme
 colorscheme vividchalk
 
-=======
- 
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
-=======
- 
->>>>>>> 88338de72246a3158686d04df9b29f02b2d388ea
 " make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
