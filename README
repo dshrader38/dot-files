@@ -9,7 +9,12 @@ Create symlinks:
   ln -fs ~/dot-files/.bashrc ~/.bashrc
   ln -fs ~/dot-files/.bash_profile ~/.bash_profile
   ln -fs ~/dot-files/.gitconfig ~/.gitconfig
+  ln -fs ~/fot-files/.gitignore_global ~/.gitignore_global 
   ln -fs ~/dot-files/.ssh ~/.ssh
+
+Set the git global ignore file:
+  git config --global core.excludesfile '~/.gitignore_global`' 
+  git config --get core.excludesfile
 
 Switch to the `~/.vim` directory, and fetch submodules:
 
