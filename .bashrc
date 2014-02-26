@@ -90,7 +90,7 @@ LD_LIBRARY_PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH
 
 # aliases
-alias lsl='ls -al'
+alias ll='ls -alG'
 alias path='echo -e ${PATH//:/\\n}'
 alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 
@@ -100,4 +100,6 @@ alias nikul='sh ~/scripts/maxnotionaltimestamp.sh'
 alias 3p='cd /spot/dev/3rdParty'
 alias prod='cd /spot/dev/Production'
 alias core='cd /spot/dev/Production/Common/cpp/Core'
-alias qt='~/install/Qt5.1.0/Tools/QtCreator/bin/qtcreator'
+#alias qt='~/install/Qt5.1.0/Tools/QtCreator/bin/qtcreator'
+alias qt='/spot/dev/3rdParty/cpp/qt/qt-4.8.5/gcc-4.7.3/bin/qtcreator'
+alias spotlx038='ssh -X david.shrader@spotlx038'
