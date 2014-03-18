@@ -5,9 +5,6 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# . /opt/spotdev/scripts/shared.bashrc
-
-
 # Find a file with a pattern in name:
 function ff() 
 {
@@ -48,7 +45,6 @@ function pp()
   my_ps f | awk '!/awk/ && $0~var' var=${1:-".*"} ;
 }
 
-
 # Handy extract function
 function extract()     
 {
@@ -73,6 +69,33 @@ function extract()
   fi
 }
 
+# Enough said
+function lowercase()
+{
+  echo "$1" | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/"
+}
+
+
+function get_os()
+{
+  OS=`lowercase \`uname\``
+
+  if [ "{$OS}" == "darwin" ]; then
+    OS=mac
+  elif [ "{$OS}" == "linux" ]; then
+    if [ -f /etc/redhat-release ] ; then
+      DistroBasedOn='RedHat'
+      DIST=`cat /etc/redhat-release | sed s/\ release.*//`
+      PSUEDONAME=`cat /etc/redhat-release | sed s/.*\(// | sed s/\)//`
+      REV=`cat /etc/redhat-release | sed s/.*release\ // | sed s/\ .*//`
+      OS=linux
+    fi
+  fi
+
+  echo ${OS}
+}
+
+
 #source /opt/spotdev/3rdParty/cpp/gnu/ccache/ccache-3.1.7/bin/gcc-4.6.3.env.sh
 
 CPP_SHARE=/spot/dev/3rdParty/cpp
@@ -87,7 +110,7 @@ LD_LIBRARY_PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH
 
 # aliases
-alias ll='ls -alG'
+alias ll='ls -al'
 alias path='echo -e ${PATH//:/\\n}'
 alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 
