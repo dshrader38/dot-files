@@ -89,6 +89,9 @@ function get_os()
       PSUEDONAME=`cat /etc/redhat-release | sed s/.*\(// | sed s/\)//`
       REV=`cat /etc/redhat-release | sed s/.*release\ // | sed s/\ .*//`
       OS=linux
+      echo ${DIST}
+      echo ${PSUEDONAME}
+      echo ${REV}
     fi
   fi
 
@@ -110,6 +113,7 @@ LD_LIBRARY_PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH
 
 # aliases
+alias grep='grep --color -rn'
 alias ll='ls -al'
 alias path='echo -e ${PATH//:/\\n}'
 alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
