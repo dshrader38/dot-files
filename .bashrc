@@ -119,7 +119,8 @@ alias 3p='cd /spot/dev/3rdParty'
 alias prod='cd /spot/dev/Production'
 alias core='cd /spot/dev/Production/Common/cpp/Core'
 alias qt='~/applications/Qt4.8.5/gcc-4.7.3/bin/qtcreator'
-
+alias pycharm='~/applications/pycharm-3.1.3/bin/pycharm.sh'
+alias tail='tail -f $1 | awk -f ${HOME}/tools/logging/ptail_color.awk'
 alias spotlx038='ssh -X david.shrader@spotlx038'
 
 # pip should only run if there is a virtualenv currently activated
