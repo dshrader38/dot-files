@@ -98,9 +98,6 @@ function get_os()
   echo ${OS}
 }
 
-
-#source /opt/spotdev/3rdParty/cpp/gnu/ccache/ccache-3.1.7/bin/gcc-4.6.3.env.sh
-
 CPP_SHARE=/spot/dev/3rdParty/cpp
 PYTHON_SHARE=
 
@@ -124,3 +121,9 @@ alias core='cd /spot/dev/Production/Common/cpp/Core'
 alias qt='~/applications/Qt4.8.5/gcc-4.7.3/bin/qtcreator'
 
 alias spotlx038='ssh -X david.shrader@spotlx038'
+
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+
+# cache pip-installed packages to avoid re-downloading
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
