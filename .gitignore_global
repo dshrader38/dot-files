@@ -23,6 +23,7 @@
 
 # Logs and databases #
 ######################
+logs/
 *.log
 *.sql
 *.sqlite
@@ -69,7 +70,6 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
-lib/
 
 # ReSharper #
 #############
