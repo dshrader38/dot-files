@@ -43,3 +43,7 @@ colorscheme vividchalk
 
 " make Y consistent with C and D.  See :help Y.
 nnoremap Y y$
+
+" map CAPS LOCK to ESC
+imap jk <ESC>
+

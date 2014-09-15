@@ -75,7 +75,6 @@ function lowercase()
   echo "$1" | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/"
 }
 
-
 function get_os()
 {
   OS=`lowercase \`uname\``
@@ -97,6 +96,12 @@ function get_os()
 
   echo ${OS}
 }
+
+# show npm pacakges without dependencied`:w
+function npmls() {
+  npm ls --depth=0 "$@" 2>/dev/null
+}
+
 
 CPP_SHARE=/spot/dev/3rdParty/cpp
 PYTHON_SHARE=
