@@ -12,10 +12,10 @@ Create symlinks:
   ln -fs ~/dot-files/.gitignore_global ~/.gitignore_global 
 
 Set the git global ignore file:
-  git config --global core.excludesfile '~/.gitignore_global`' 
+  git config --global core.excludesfile '~/.gitignore_global' 
   git config --get core.excludesfile
 
-Switch to the `~/.vim` directory, and fetch submodules:
+Switch to the `~/.dot-files` directory, and fetch submodules:
 
   cd ~/dot-files
   git submodule init
