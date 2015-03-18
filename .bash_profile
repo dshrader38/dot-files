@@ -6,5 +6,9 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-PATH=$PATH:$HOME/bin
+PATH=$PATH:/usr/local/smlnj/bin
 export PATH
+
+if which pyenv > /dev/null; then 
+  eval "$(pyenv init -)";
+fi

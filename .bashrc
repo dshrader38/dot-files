@@ -1,6 +1,4 @@
-# .bashrc
-
-# Source global definitions
+# .bashrc # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
@@ -9,6 +7,12 @@ fi
 function ff() 
 {
   find . -type f -iname '*'"$*"'*' -ls ;
+}
+
+# Find a file with a pattern in name:
+function fd() 
+{
+  find . -type f -iname '*'"$*"'*' -delete ;
 }
 
 # Get IP adress on ethernet.
@@ -102,16 +106,31 @@ function npmls() {
   npm ls --depth=0 "$@" 2>/dev/null
 }
 
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+  platform='linux'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+  platform='darwin'
+fi
 
-CPP_SHARE=/spot/dev/3rdParty/cpp
-PYTHON_SHARE=
+#if [[ $platform == 'linux' ]]; then
+#  PATH=/usr/local/bin/:$PATH
+#elif [[ $platform == 'darwin' ]]; then
+#  PATH=/usr/local/bin/:$PATH
+#  echo "echo this:"
+#  echo $PATH
+#fi 
 
-PATH=$HOME/applications/ninja:$PATH
-PATH=$HOME/applications/cmake-2.8.12.2-Linux-i386/bin:$PATH
-PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/bin:$PATH
-export PATH
+#CPP_SHARE=/spot/dev/3rdParty/cpp
 
-LD_LIBRARY_PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/lib:$LD_LIBRARY_PATH
+#PATH=$HOME/applications/ninja:$PATH
+#PATH=$HOME/applications/cmake-2.8.12.2-Linux-i386/bin:$PATH
+#PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/bin:$PATH
+#export PATH
+
+#LD_LIBRARY_PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/lib:$LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH
 
 # aliases
