@@ -146,6 +146,7 @@ alias qt='~/applications/Qt4.8.5/gcc-4.7.3/bin/qtcreator'
 alias pycharm='~/applications/pycharm-3.4.1/bin/pycharm.sh'
 #alias tail='tail -f $1 | awk -f ${HOME}/tools/logging/ptail_color.awk'
 alias spotlx038='ssh -X david.shrader@spotlx038'
+alias tmux='tmux -z'
 
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
