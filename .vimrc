@@ -15,6 +15,7 @@ set hidden
 
 " turn on syntax highlighting
 syntax on
+filetype indent plugin on
 
 set autoindent                  " keep the same indent as the line you're currently on
 set autoread			              " relaod filed changed outside of vim
