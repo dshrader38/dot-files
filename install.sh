@@ -14,7 +14,4 @@ git config --global core.excludesfile '~/.gitignore_global'
 git config --get core.excludesfilei
 
 # switch to the `~/.dot-files` directory, and fetch submodules:
-cd ~/dot-files
 git submodule init && git submodule update
-
-cd  ~
