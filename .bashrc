@@ -3,13 +3,13 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# Find a file with a pattern in name:
+# Find file(s) with a pattern in name.
 function ff() 
 {
   find . -type f -iname '*'"$*"'*' -ls ;
 }
 
-# Find and file with a pattern in name:
+# Find file(s) with a pattern in name and delete.
 function fd() 
 {
   find . -type f -iname '*'"$*"'*' -delete ;
@@ -38,7 +38,7 @@ function ii()
   echo
 }
 
-# Process related funcitons
+# Process related function(s)
 function my_ps()
 {
   ps $@ -u $USER -o pid,%cpu,%mem,bsdtime,command ;
@@ -46,7 +46,7 @@ function my_ps()
 
 function pp()
 {
-  my_ps f | awk '!/awk/ && $0~var' var=${1:-".*"} ;
+  my_ps -f | awk '!/awk/ && $0~var' var=${1:-".*"} ;
 }
 
 # Handy extract function
