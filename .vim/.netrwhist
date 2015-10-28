@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/davidshrader/Development/protobuf-2.4.1-py2.7-linux-x86_64/EGG-INFO'
 let g:netrw_dirhist_2='/Users/davidshrader/Development/Spot/ForecastAndResearch/streetevents-service/.git'
 let g:netrw_dirhist_3='/Users/davidshrader/Development/Spot/ForecastAndResearch/protocol/proto3/spot/models'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/Users/davidshrader/Development/Spot/ForecastAndResearch/
 let g:netrw_dirhist_6='/Users/davidshrader/Development/Spot/ForecastAndResearch/bloomberg-service/build/plugins'
 let g:netrw_dirhist_7='/Users/davidshrader/dot-files/.git'
 let g:netrw_dirhist_8='/Users/davidshrader/Development/Spot/ForecastAndResearch/event-service2/protocol/proto3/spot/models'
+let g:netrw_dirhist_9='/Users/davidshrader/dot-files/.tmux'
