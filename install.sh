@@ -12,7 +12,6 @@ ln -fs ~/dot-files/.gitignore_global ~/.gitignore_global
 
 # set global git parameters
 git config --global core.excludesfile '~/.gitignore_global' 
-git config --get core.excludesfilei
 
 # switch to the `~/.dot-files` directory, and fetch submodules:
 git submodule init && git submodule update
