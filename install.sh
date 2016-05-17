@@ -15,3 +15,6 @@ git config --global core.excludesfile '~/.gitignore_global'
 
 # switch to the `~/.dot-files` directory, and fetch submodules:
 git submodule init && git submodule update
+
+# install tmux plugins (can be automated)
+# <ctrl> + j + I
