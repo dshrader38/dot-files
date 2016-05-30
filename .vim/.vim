@@ -1,1 +1,1 @@
-/Users/david.shrader/dot-files/.vim
+/Users/davidshrader/dot-files/.vim
