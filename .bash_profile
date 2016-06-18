@@ -12,3 +12,9 @@ export PATH
 if which pyenv > /dev/null; then 
   eval "$(pyenv init -)";
 fi
+
+PGHOST=localhost
+export PGHOST
+PGDATA="/usr/local/var/postgres"
+export PGDATA
+
