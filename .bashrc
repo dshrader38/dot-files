@@ -139,14 +139,14 @@ alias ll='ls -al'
 alias path='echo -e ${PATH//:/\\n}'
 alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 
-alias 3p='cd /spot/dev/3rdParty'
-alias prod='cd /spot/dev/Production'
-alias core='cd /spot/dev/Production/Common/cpp/Core'
-alias qt='~/applications/Qt4.8.5/gcc-4.7.3/bin/qtcreator'
-alias pycharm='~/applications/pycharm-3.4.1/bin/pycharm.sh'
+#alias 3p='cd /spot/dev/3rdParty'
+#alias prod='cd /spot/dev/Production'
+#alias core='cd /spot/dev/Production/Common/cpp/Core'
+#alias qt='~/applications/Qt4.8.5/gcc-4.7.3/bin/qtcreator'
+#alias pycharm='~/applications/pycharm-3.4.1/bin/pycharm.sh'
+#alias spotlx038='ssh -X david.shrader@spotlx038'
+#alias earnstg='ssh -X david.shrader@chivlxstg143'
 
-alias spotlx038='ssh -X david.shrader@spotlx038'
-alias earnstg='ssh -X david.shrader@chivlxstg143'
 alias tmux='tmux -2' 
 
 # pip should only run if there is a virtualenv currently activated
