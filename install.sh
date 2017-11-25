@@ -7,6 +7,7 @@ ln -fs ~/dot-files/.bash_logout ~/.bash_logout
 ln -fs ~/dot-files/.config ~/.config
 ln -fs ~/dot-files/.gitconfig ~/.gitconfig
 ln -fs ~/dot-files/.gitignore_global ~/.gitignore_global 
+ln -fs ~/dot-files/.pip ~/.pip
 ln -fs ~/dot-files/.tmux ~/.tmux
 ln -fs ~/dot-files/.tmux.conf ~/.tmux.conf
 ln -fs ~/dot-files/.vim ~/.vim

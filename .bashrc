@@ -1,28 +1,28 @@
-# .bashrc # Source global definitions
+# global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# Find file(s) with a pattern in name.
+# find file(s) with a pattern in name
 function ff() 
 {
   find . -type f -iname '*'"$*"'*' -ls ;
 }
 
-# Find file(s) with a pattern in name and delete.
+# find file(s) with a pattern in name and delete
 function fd() 
 {
   find . -type f -iname '*'"$*"'*' -delete ;
 }
 
-# Get IP adress on ethernet.
+# get IP adress on ethernet
 function my_ip()
 {
   MY_IP=$(/sbin/ifconfig eth0 | awk '/inet/ { print $2 } ' | sed -e s/addr://)
   echo ${MY_IP:-"Not connected"}
 }
 
-# Get current host related info.
+# get current host related info
 function ii()   
 {
   echo -e "\nYou are logged on ${BRed}$HOST"
@@ -38,7 +38,7 @@ function ii()
   echo
 }
 
-# Process related function(s)
+# process related function(s)
 function my_ps()
 {
   ps $@ -u $USER -o pid,%cpu,%mem,bsdtime,command ;
@@ -49,7 +49,6 @@ function pp()
   my_ps -f | awk '!/awk/ && $0~var' var=${1:-".*"} ;
 }
 
-# Handy extract function
 function extract()     
 {
   if [ -f $1 ] ; then
@@ -73,7 +72,6 @@ function extract()
   fi
 }
 
-# Enough said
 function lowercase()
 {
   echo "$1" | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/"
@@ -101,7 +99,7 @@ function get_os()
   echo ${OS}
 }
 
-# show npm pacakges without dependencied`:w
+# show npm pacakges without dependencies
 function npmls() {
   npm ls --depth=0 "$@" 2>/dev/null
 }
@@ -122,8 +120,6 @@ fi
 #  echo $PATH
 #fi 
 
-#CPP_SHARE=/spot/dev/3rdParty/cpp
-
 #PATH=$HOME/applications/ninja:$PATH
 #PATH=$HOME/applications/cmake-2.8.12.2-Linux-i386/bin:$PATH
 #PATH=$CPP_SHARE/gnu/gcc/gcc-4.7.3/bin:$PATH
@@ -135,25 +131,40 @@ export LD_LIBRARY_PATH
 
 # aliases
 alias grep='grep --color -rn'
+alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 alias ll='ls -al'
 alias path='echo -e ${PATH//:/\\n}'
-alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
-
-#alias 3p='cd /spot/dev/3rdParty'
-#alias prod='cd /spot/dev/Production'
-#alias core='cd /spot/dev/Production/Common/cpp/Core'
-#alias qt='~/applications/Qt4.8.5/gcc-4.7.3/bin/qtcreator'
-#alias pycharm='~/applications/pycharm-3.4.1/bin/pycharm.sh'
+alias tmux='tmux -2' 
 #alias spotlx038='ssh -X david.shrader@spotlx038'
 #alias earnstg='ssh -X david.shrader@chivlxstg143'
-
-alias tmux='tmux -2' 
 
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
 
 # cache pip-installed packages to avoid re-downloading
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+export PIP_DOWNLOAD_CACHE=~/.pip/cache
 
+# java vars
+JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME
+
+# postgress vars
+PGHOST=localhost
+export PGHOST
+PGDATA="/usr/local/var/postgres"
+export PGDATA
+
+# not sure what this is
+test -e "~/.iterm2_shell_integration.bash" && source "~/.iterm2_shell_integration.bash"
+
+# enable git completion
 source ~/dot-files/.git-completion.sh
 
+# enable Google Cloude SDK and command completion
+if [ -f '~/sdk/google-cloud-sdk/path.bash.inc' ];
+  then source '~/sdk/google-cloud-sdk/path.bash.inc';
+fi
+
+if [ -f '~/sdk/google-cloud-sdk/completion.bash.inc' ];
+  then source '~/sdk/google-cloud-sdk/completion.bash.inc';
+fi
