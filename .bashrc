@@ -134,7 +134,9 @@ alias grep='grep --color -rn'
 alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 alias ll='ls -al'
 alias path='echo -e ${PATH//:/\\n}'
-alias tmux='tmux -2' 
+alias tmux='tmux -2'
+alias zkstart='zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties'
+alias kafkastart='kafka-server-start /usr/local/etc/kafka/server.properties'
 
 alias awsdev='ssh ec2-user@18.216.57.55 -i ~/maven2.pem'
 
