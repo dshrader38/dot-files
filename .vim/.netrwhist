@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/david.shrader/dot-files/.tmux'
 let g:netrw_dirhist_2='/Users/david.shrader/dot-files'
 let g:netrw_dirhist_3='/Users/david.shrader'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/Users/davidshrader/Development/condograde/condogradepy/t
 let g:netrw_dirhist_6='/Users/davidshrader/Development/condograde/condogradepy/templates/auth'
 let g:netrw_dirhist_7='/Users/davidshrader/.tmux'
 let g:netrw_dirhist_8='/Users/davidshrader/Development/sandbox/Playground/CMakeFiles'
+let g:netrw_dirhist_9='/Users/davidshrader/dot-files/.tmux'

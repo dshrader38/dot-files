@@ -1,5 +1,7 @@
 # global definitions
-if [ -f /etc/bashrc ]; then . /etc/bashrc fi
+if [ -f /etc/bashrc ];
+  then . /etc/bashrc;
+fi
 
 # find file(s) with a pattern in name
 function ff() 
@@ -134,10 +136,7 @@ alias ll='ls -al'
 alias path='echo -e ${PATH//:/\\n}'
 alias tmux='tmux -2' 
 
-alias aws='ssh ec2-user@18.216.57.55 -i ~/maven2.pem'
-
-# pip should only run if there is a virtualenv currently activated
-export PIP_REQUIRE_VIRTUALENV=true
+alias awsdev='ssh ec2-user@18.216.57.55 -i ~/maven2.pem'
 
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=~/.pip/cache
