@@ -157,7 +157,9 @@ export PGDATA
 test -e "~/.iterm2_shell_integration.bash" && source "~/.iterm2_shell_integration.bash"
 
 # enable git completion
-source ~/dot-files/.git-completion.sh
+if [ -f '~/dot-files/.git-completion.sh' ];
+  then source '~/dot-files/.git-completion.sh';
+fi
 
 # enable Google Cloude SDK and command completion
 if [ -f '~/sdk/google-cloud-sdk/path.bash.inc' ];
