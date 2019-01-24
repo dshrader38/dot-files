@@ -3,7 +3,7 @@
 	email = dshrader38@gmail.com 
 [core]
 	editor = vim
-	autocrlf = false
+	autocrlf = input
 	excludesfile = ~/.gitignore_global
 [help]
 	autocorrect = 1
