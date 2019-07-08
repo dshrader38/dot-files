@@ -2,20 +2,13 @@
 
 echo "Starting bootstrap..."
 
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    # ...
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    source 
-elif [[ "$OSTYPE" == "cygwin" ]]; then
-    # POSIX compatibility layer and Linux environment emulation for Windows
-elif [[ "$OSTYPE" == "msys" ]]; then
-    # Lightweight shell and GNU utilities compiled for Windows (part of MinGW)
-elif [[ "$OSTYPE" == "win32" ]]; then
-    # I'm not sure this can happen.
-elif [[ "$OSTYPE" == "freebsd"* ]]; then
-    # ...
-else
-    # Unknown.
+echo $OSTYPE
+source ./bootstrap_osx.sh
+
+if [ "$OSTYPE" = "linux-gnu" ]; then
+    source ./bootstrap_linux.sh
+elif [ "$OSTYPE" == "darwin"* ]; then
+    source ./bootstrap_osx.sh
 fi
 
 # Install Python packages
@@ -27,18 +20,6 @@ PYTHON_PACKAGES=(
 
 echo "Installing Python packages..."
 #sudo pip install ${PYTHON_PACKAGES[@]}
-
-echo "Configuring OSX..."
-
-# Set fast key repeat rate
-defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
-defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
-
-# Show filename extensions by default
-defaults write -g AppleShowAllExtensions -bool true
-
-# Disable "natural" scroll
-defaults write -g com.apple.swipescrolldirection -bool false
 
 # create dot-files symlinks 
 ln -fs ~/dot-files/.bashrc ~/.bashrc

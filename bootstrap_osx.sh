@@ -9,8 +9,19 @@ if test ! $(which brew); then
     # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
 fi
 
-# Update homebrew recipes
-brew update
+# Install Homebrew apps
+CASKS=(
+    docker
+    flux
+    google-chrome
+    google-drive
+    java
+    slack
+    visual-studio-code
+)
+
+echo "Installing Homebrew apps..."
+brew cask install ${CASKS[@]}
 
 # Install Homebrew packages
 PACKAGES=(
@@ -39,7 +50,7 @@ PACKAGES=(
     hub                             # Add GitHub support to git on the command-line
     icu4c                           # C/C++ and Java libraries for Unicode and globalization
     jq                              # Lightweight and flexible command-line JSON processor
-    kafka                           # Publish-subscribe messaging rethought as a distributed commit log
+    #kafka                           # Publish-subscribe messaging rethought as a distributed commit log
     kubernetes-cli                  # Kubernetes command-line interface
     libev                           # Asynchronous event library
     libevent                        # Asynchronous event library
@@ -76,36 +87,6 @@ echo "Installing Homebrew packages..."
 #brew remove --force ${PACKAGES[@]} --ignore-dependencies  
 brew install ${PACKAGES[@]}
 
-# Install Homebrew apps
-CASKS=(
-    docker
-    flux
-    google-chrome
-    google-drive
-    java
-    slack
-    visual-studio-code
-)
-
-echo "Installing H0mebrew apps..."
-#brew cask install ${CASKS[@]}
-
-# Install fonts
-brew tap homebrew/cask-fonts
-
-FONTS=(
-    font-inconsolata
-    font-roboto
-    font-clear-sans
-)
-
-echo "Installing fonts..."
-#brew remove --force ${FONTS[@]} --ignore-dependencies  
-brew cask install ${FONTS[@]}
-
-echo "Cleaning up..."
-brew cleanup
-
 # Set fast key repeat rate
 defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 5 # normal minimum is 2 (30 ms)
@@ -122,6 +103,6 @@ defaults write com.apple.dock show-recents -bool false
 killall Dock
 
 # Create the locate database (/var/db/locate.database)
-sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+#sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
 echo "OSX Complete"
