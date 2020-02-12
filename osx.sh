@@ -6,7 +6,6 @@ echo "Configuring OSX..."
 if test ! $(which brew); then
     echo "Installing Homebrew..."
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
 fi
 
 # Install Homebrew apps
@@ -50,6 +49,7 @@ PACKAGES=(
     hub                             # Add GitHub support to git on the command-line
     icu4c                           # C/C++ and Java libraries for Unicode and globalization
     jq                              # Lightweight and flexible command-line JSON processor
+    kotlin                          # Statically typed programming language for the JVM
     #kafka                           # Publish-subscribe messaging rethought as a distributed commit log
     kubernetes-cli                  # Kubernetes command-line interface
     libev                           # Asynchronous event library
@@ -84,7 +84,7 @@ PACKAGES=(
 )
 
 echo "Installing Homebrew packages..."
-#brew remove --force ${PACKAGES[@]} --ignore-dependencies  
+#brew remove --force ${PACKAGES[@]} --ignore-dependencies
 brew install ${PACKAGES[@]}
 
 # Set fast key repeat rate
@@ -97,7 +97,7 @@ defaults write -g AppleShowAllExtensions -bool true
 # Disable "natural" scroll
 defaults write -g com.apple.swipescrolldirection -bool true
 
-# Automatically hide and show the Dock; Disable recents 
+# Automatically hide and show the Dock; Disable recents
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock show-recents -bool false
 killall Dock

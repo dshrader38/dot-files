@@ -29,8 +29,8 @@ Thumbs.db
 *.files
 *.includes
 
-# Ignore PyCharm IDEA temporary files #
-####################################
+# Ignore IDEA temporary files #
+###############################
 *.idea
 
 # Ignore Visual Studio temporary files, build results, and #

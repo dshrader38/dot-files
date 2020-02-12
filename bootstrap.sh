@@ -6,9 +6,9 @@ echo $OSTYPE
 source ./bootstrap_osx.sh
 
 if [ "$OSTYPE" = "linux-gnu" ]; then
-    source ./bootstrap_linux.sh
+    source ./linux.sh
 elif [ "$OSTYPE" == "darwin"* ]; then
-    source ./bootstrap_osx.sh
+    source ./osx.sh
 fi
 
 # Install Python packages
