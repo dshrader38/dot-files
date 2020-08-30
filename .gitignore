@@ -1,7 +1,9 @@
 *.log
 
+/.pip/
+
+/.vim/.netrwhist
+
 # tmux plugins are installed via tpm so no need to source control them
 /.tmux/resurrect/
 /.tmux/plugins/
-
-/.pip/

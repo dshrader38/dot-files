@@ -73,3 +73,7 @@ ipch/
 *.ncb
 *.opensdf
 *.sdf
+
+# Visual Studio Code #
+######################
+.vscode

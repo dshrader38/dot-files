@@ -4,13 +4,13 @@ if [ -f /etc/bashrc ];
 fi
 
 # find file(s) with a pattern in name
-function ff() 
+function ff()
 {
   find . -type f -iname '*'"$*"'*' -ls ;
 }
 
 # find file(s) with a pattern in name and delete
-function fd() 
+function fd()
 {
   find . -type f -iname '*'"$*"'*' -delete ;
 }
@@ -23,7 +23,7 @@ function my_ip()
 }
 
 # get current host related info
-function ii()   
+function ii()
 {
   echo -e "\nYou are logged on ${BRed}$HOST"
   echo -e "\n${BRed}Additionnal information:$NC " ; uname -a
@@ -49,7 +49,7 @@ function pp()
   my_ps -f | awk '!/awk/ && $0~var' var=${1:-".*"} ;
 }
 
-function extract()     
+function extract()
 {
   if [ -f $1 ] ; then
     case $1 in

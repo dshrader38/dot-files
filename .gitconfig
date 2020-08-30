@@ -1,6 +1,6 @@
 [user]
-	name = david.shrader
-	email = dshrader38@gmail.com 
+	name = SHRADD1
+	email = david-shrader_atos_syntel@whirlpool.com
 [core]
 	editor = vim
 	autocrlf = input
@@ -30,3 +30,8 @@
 	trustExitCode = true
 [url "https://"]
 	insteadOf = git://
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
