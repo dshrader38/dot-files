@@ -137,15 +137,11 @@ alias path='echo -e ${PATH//:/\\n}'
 alias tmux='tmux -2'
 alias zkstart='zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties'
 alias kafkastart='kafka-server-start /usr/local/etc/kafka/server.properties'
-
 alias awsdev='ssh ec2-user@18.216.57.55 -i ~/maven2.pem'
+alias gitbdl='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=~/.pip/cache
-
-# java vars
-JAVA_HOME=$(/usr/libexec/java_home)
-export JAVA_HOME
 
 # postgress vars
 PGHOST=localhost
@@ -157,9 +153,7 @@ export PGDATA
 test -e "~/.iterm2_shell_integration.bash" && source "~/.iterm2_shell_integration.bash"
 
 # enable git completion
-if [ -f '~/dot-files/.git-completion.sh' ];
-  then source '~/dot-files/.git-completion.sh';
-fi
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # enable Google Cloude SDK and command completion
 if [ -f '~/sdk/google-cloud-sdk/path.bash.inc' ];

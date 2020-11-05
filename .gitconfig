@@ -1,6 +1,10 @@
 [user]
-	name = SHRADD1
-	email = david-shrader_atos_syntel@whirlpool.com
+	name = dshrader38
+	email = dshrader38@gmail.com
+[includeIf "gitdir/i:~/Development/whirlpool/"]
+    path = ~/Development/whirlpool/.gitconfig
+[includeIf "gitdir/i:~/Development/nyuib/"]
+    path = ~/Development/nyuib/.gitconfig
 [core]
 	editor = vim
 	autocrlf = input
@@ -15,16 +19,17 @@
 	helper = cache --timeout=3600
 [alias]
 	b = branch
-  ba = branch -a
-  bd = branch -d
+	ba = branch -a
+	bd = branch -d
 	ci = commit
-  co = checkout
+	co = checkout
 	d = diff
-  st = status
-  lg = log --graph --decorate --pretty=oneline
+	st = status
+	lg = log --graph --decorate --pretty=oneline
+	rpo = remote prune origin
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -35,3 +40,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[pull]
+	rebase = false
