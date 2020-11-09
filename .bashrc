@@ -3,6 +3,9 @@ if [ -f /etc/bashrc ];
   then . /etc/bashrc;
 fi
 
+# custom command prompt
+PS1="[\[\033[32m\]\w]\[\033[0m\]\n\[\033[1;36m\]\u\[\033[1;33m\]-> \[\033[0m\]"
+
 # find file(s) with a pattern in name
 function ff()
 {
@@ -155,7 +158,7 @@ test -e "~/.iterm2_shell_integration.bash" && source "~/.iterm2_shell_integratio
 # enable git completion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
-# enable Google Cloude SDK and command completion
+# enable Google Cloud SDK and command completion
 if [ -f '~/sdk/google-cloud-sdk/path.bash.inc' ];
   then source '~/sdk/google-cloud-sdk/path.bash.inc';
 fi
