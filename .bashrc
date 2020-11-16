@@ -166,3 +166,5 @@ fi
 if [ -f '~/sdk/google-cloud-sdk/completion.bash.inc' ];
   then source '~/sdk/google-cloud-sdk/completion.bash.inc';
 fi
+
+echo 'BASHRC'

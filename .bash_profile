@@ -15,3 +15,5 @@ export PATH="/usr/local/sbin:$PATH"
 export CLOUDSDK_PYTHON="/usr/bin/python"
 
 eval "$(jenv init -)"
+
+echo 'BASHPROFILE'
