@@ -1,3 +1,5 @@
+# .bashrc
+
 # global definitions
 if [ -f /etc/bashrc ];
   then . /etc/bashrc;
@@ -141,6 +143,7 @@ alias tmux='tmux -2'
 alias zkstart='zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties'
 alias kafkastart='kafka-server-start /usr/local/etc/kafka/server.properties'
 alias awsdev='ssh ec2-user@18.216.57.55 -i ~/maven2.pem'
+alias wpstage='ssh -i "~/.ssh/cloudwatch-stage.pem" ec2-user@10.10.120.93'
 alias gitbdl='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 # cache pip-installed packages to avoid re-downloading
@@ -151,6 +154,9 @@ PGHOST=localhost
 export PGHOST
 PGDATA="/usr/local/var/postgres"
 export PGDATA
+
+# tell broken libraries where to find the terminal database
+export TERMINFO=/usr/share/terminfo
 
 # not sure what this is
 test -e "~/.iterm2_shell_integration.bash" && source "~/.iterm2_shell_integration.bash"
@@ -166,3 +172,6 @@ fi
 if [ -f '~/sdk/google-cloud-sdk/completion.bash.inc' ];
   then source '~/sdk/google-cloud-sdk/completion.bash.inc';
 fi
+
+# when is this called?
+echo '.bashrc'
