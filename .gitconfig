@@ -2,9 +2,11 @@
 	name = dshrader38
 	email = dshrader38@gmail.com
 [includeIf "gitdir/i:~/Development/whirlpool/"]
-    path = ~/Development/whirlpool/.gitconfig
+  path = ~/Development/whirlpool/.gitconfig
 [includeIf "gitdir/i:~/Development/nyuib/"]
-    path = ~/Development/nyuib/.gitconfig
+  path = ~/Development/nyuib/.gitconfig
+[includeIf "gitdir/i:~/Development/carrier/"]
+  path = ~/Development/carrier/.gitconfig
 [core]
 	editor = vim
 	autocrlf = input
